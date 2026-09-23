@@ -76,8 +76,9 @@ ethereum_genesis_generator_config_files:
     # EIP-8141 only: the CL keeps Heze off (HEZE_FORK_EPOCH pinned to max in config.yaml)
     # while the EL activates bogota at HEZE_FORK_EPOCH. Keeps FOCIL (EIP-7805) out.
     export FRAMES_ENABLED=true
-    export GENESIS_GASLIMIT=200000000
-    export GAS_LIMIT_SCHEDULE='[{"epoch": 0, "gas_limit": 200000000}]'
+    # 60M: lighthouse (every CL here) ignores GAS_LIMIT_SCHEDULE and, post-Gloas, its VC
+    # --gas-limit never reaches the BN, so proposers target its hardcoded 60M default.
+    export GENESIS_GASLIMIT=60000000
     export GENESIS_TIMESTAMP={{ ethereum_genesis_timestamp }}
     export GENESIS_DELAY={{ ethereum_genesis_timedelay }}
     export WITHDRAWAL_TYPE=0x02

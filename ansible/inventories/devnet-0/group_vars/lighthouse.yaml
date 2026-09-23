@@ -43,9 +43,6 @@ lighthouse_validator_container_volumes:
   - "{{ eth_testnet_config_dir }}:/network-config:ro"
 lighthouse_validator_container_command_extra_args:
   - --testnet-dir=/network-config
-  # Post-Gloas the proposer's preference sets the payload gas limit; lighthouse ignores
-  # GAS_LIMIT_SCHEDULE and would otherwise drift the chain to its 60M default.
-  - --gas-limit=200000000
   - --graffiti={{ inventory_hostname }}
 lighthouse_validator_datadir: /data/lighthouse-validator
 lighthouse_container_pull: true
