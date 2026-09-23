@@ -13,7 +13,7 @@ variable "digitalocean_ssh_key_name" {
 
 variable "digitalocean_supernode_size" {
   type    = string
-  default = "s-8vcpu-32gb-640gb-intel"
+  default = "s-8vcpu-16gb-480gb-intel"
 }
 
 variable "digitalocean_fullnode_size" {
