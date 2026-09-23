@@ -28,11 +28,9 @@ variable "nodes" {
   description = "List of node definitions for the devnet"
   default = [
     { name = "bootnode", count = 1, cloud = "digitalocean" },
-    { name = "mev-relay", count = 1, cloud = "hetzner", size = "ccx53" },
-    { name = "buildoor-prysm-geth", count = 1, cloud = "hetzner" },
-    { name = "lighthouse-geth", count = 2, cloud = "digitalocean", validator_start = 0, validator_end = 400 },
-    { name = "lighthouse-geth", count = 1, cloud = "hetzner", validator_start = 400, validator_end = 500 },
-    { name = "prysm-nethermind", count = 1, cloud = "hetzner", validator_start = 500, validator_end = 550 },
+    { name = "lighthouse-geth", count = 2, cloud = "digitalocean", supernode = true, validator_start = 0, validator_end = 200 },
+    { name = "lighthouse-nethermind", count = 2, cloud = "digitalocean", supernode = true, validator_start = 200, validator_end = 400 },
+    { name = "lighthouse-reth", count = 2, cloud = "digitalocean", supernode = true, validator_start = 400, validator_end = 600 },
   ]
 
   validation {

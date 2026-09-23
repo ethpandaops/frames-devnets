@@ -1,11 +1,11 @@
 <div align="center"><img src="./docs/images/panda.png" width="300"/></div>
 <h2 align="center">🐼 ❤️.oO<br>"Pandas love everything"</h2>
-<h1 align="center">Infrastructure code for Dev/Testnets</h1>
+<h1 align="center">Infrastructure code for the Frames (EIP-8141) devnets</h1>
 
 <p align="center">
-<a href="https://github.com/ethpandaops/template-testnet/actions/workflows/ansible_lint.yaml"><img src="https://github.com/ethpandaops/template-testnet/actions/workflows/ansible_lint.yaml/badge.svg"></a>
-<a href="https://github.com/ethpandaops/template-testnet/actions/workflows/terraform_lint.yaml"><img src="https://github.com/ethpandaops/template-testnet/actions/workflows/terraform_lint.yaml/badge.svg"></a>
-<a href="https://github.com/ethpandaops/template-testnet/actions/workflows/helm_lint.yaml"><img src="https://github.com/ethpandaops/template-testnet/actions/workflows/helm_lint.yaml/badge.svg"></a>
+<a href="https://github.com/ethpandaops/frames-devnets/actions/workflows/lint-ansible.yaml"><img src="https://github.com/ethpandaops/frames-devnets/actions/workflows/lint-ansible.yaml/badge.svg"></a>
+<a href="https://github.com/ethpandaops/frames-devnets/actions/workflows/lint-terraform.yaml"><img src="https://github.com/ethpandaops/frames-devnets/actions/workflows/lint-terraform.yaml/badge.svg"></a>
+<a href="https://github.com/ethpandaops/frames-devnets/actions/workflows/lint-helm.yaml"><img src="https://github.com/ethpandaops/frames-devnets/actions/workflows/lint-helm.yaml/badge.svg"></a>
 </p>
 
 This repository contains the infrastructure code used to setup ~all~ dev/testnets. A lot of the code uses reusable components either provided by our [ansible collection](https://github.com/ethpandaops/ansible-collection-general) or our [helm charts for kubernetes](https://github.com/ethpandaops/ethereum-helm-charts/).
@@ -14,7 +14,7 @@ This repository contains the infrastructure code used to setup ~all~ dev/testnet
 
 Status   | Network    | Links   | Ansible                                                      | Terraform | Kubernetes
 ------   | --------   | ----     |  -----                                                       | -------   | ------
- 🟢Template🔴 | [devnet-0](https://template.devnet.io/)   | [Network config](network-configs/devnet-0) / [Inventory](https://bootnode-1.devnet-0.ethpandaops.io/meta/api/v1/inventory.json) / [Validator ranges](https://bootnode-1.devnet-0.ethpandaops.io/meta/api/v1/validator-ranges.json)    | [🔗](ansible/inventories/devnet-0) | [🔗](terraform/devnet-0) | [🔗](kubernetes/devnet-0)
+ 🟢 | [devnet-0](https://frames-devnet-0.ethpandaops.io/) | [Spec](https://notes.ethereum.org/@ethpandaops/frames-devnet-0) / [Network config](network-configs/devnet-0) / [Inventory](https://config.frames-devnet-0.ethpandaops.io/api/v1/nodes/inventory) / [Validator ranges](https://config.frames-devnet-0.ethpandaops.io/api/v1/nodes/validator-ranges) | [🔗](ansible/inventories/devnet-0) | [🔗](terraform/devnet-0) | [🔗](kubernetes/devnet-0)
 
 # Development
 ## Version management for tools
