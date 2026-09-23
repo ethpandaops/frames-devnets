@@ -44,7 +44,10 @@ lighthouse_validator_container_volumes:
 lighthouse_validator_container_command_extra_args:
   - --testnet-dir=/network-config
   # Takes effect post-Gloas once the pinned lighthouse image includes sigp/lighthouse#9878.
+  # lighthouse requires --builder-proposals alongside --gas-limit; no builder or mev-boost
+  # runs here (the BN has no --builder), matching the kurtosis setup that was tested.
   - --gas-limit=200000000
+  - --builder-proposals
   - --graffiti={{ inventory_hostname }}
 lighthouse_validator_datadir: /data/lighthouse-validator
 lighthouse_container_pull: true
