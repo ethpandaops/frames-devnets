@@ -60,6 +60,9 @@ lighthouse_container_volumes:
 lighthouse_container_command_extra_args:
   - --testnet-dir=/network-config
   - --archive
+  # As on every lighthouse host: a fresh datadir must still start from the genesis
+  # state after the Deneb blob window has passed.
+  - --allow-insecure-genesis-sync
   - >-
     --boot-nodes={{
       (
