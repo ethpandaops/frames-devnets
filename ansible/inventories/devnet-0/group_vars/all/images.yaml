@@ -8,9 +8,7 @@ default_ethereum_client_images:
   nimbus: statusim/nimbus-eth2:multiarch-latest
   prysm: gcr.io/offchainlabs/prysm/beacon-chain:latest
   prysm_validator: gcr.io/offchainlabs/prysm/validator:latest
-  # Bootnode CL. Stable teku (26.9.0) fails a Gloas genesis ("Genesis block root ... does not
-  # match genesis state latest block root"); master handles it. Pinned like lighthouse.
-  teku: ethpandaops/teku:master-deb3e80
+  teku: consensys/teku:latest
   grandine: ethpandaops/grandine:develop
   ### Execution layer clients
   besu: hyperledger/besu:latest
