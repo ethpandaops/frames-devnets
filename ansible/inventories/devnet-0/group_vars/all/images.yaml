@@ -1,6 +1,9 @@
 default_ethereum_client_images:
   ### Consensus layer clients
-  lighthouse: sigp/lighthouse:latest
+  # Pinned to the unstable build tested in kurtosis so watchtower cannot roll a new
+  # unstable onto every CL between genesis and the bogota fork. Bump deliberately
+  # (e.g. once sigp/lighthouse#9878 lands).
+  lighthouse: ethpandaops/lighthouse:unstable-4b1f3c2
   lodestar: chainsafe/lodestar:latest
   nimbus: statusim/nimbus-eth2:multiarch-latest
   prysm: gcr.io/offchainlabs/prysm/beacon-chain:latest
@@ -9,12 +12,12 @@ default_ethereum_client_images:
   grandine: ethpandaops/grandine:develop
   ### Execution layer clients
   besu: hyperledger/besu:latest
-  geth: ethereum/client-go:stable
+  geth: ethpandaops/geth:frames-devnet-0
   erigon: erigontech/erigon:main-latest
-  nethermind: nethermindeth/nethermind:master
-  reth: ghcr.io/paradigmxyz/reth:latest
+  nethermind: ethpandaops/nethermind:frames-devnet-0
+  reth: ethpandaops/reth:frames-devnet-0
   nimbusel: ethpandaops/nimbus-eth1:master
-  ethrex: ghcr.io/lambdaclass/ethrex:latest
+  ethrex: ethpandaops/ethrex:frames-devnet-0
 
 default_tooling_images:
   mev_boost: ethpandaops/mev-boost:develop
@@ -22,7 +25,7 @@ default_tooling_images:
   mev_relay: ethpandaops/mev-boost-relay:main
   buildoor: ethpandaops/buildoor:main
   authenticatoor: ethpandaops/service-authenticatoor:main
-  xatu_sentry: ethpandaops/xatu:latest
+  xatu_sentry: ethpandaops/xatu:glamsterdam-devnet-11 # Gloas-capable; xatu master has no Gloas support
   xatu_cannon: ethpandaops/xatu:latest
   xatu_mimicry: ethpandaops/xatu:latest
   xatu_cl_mimicry: ethpandaops/xatu:latest
