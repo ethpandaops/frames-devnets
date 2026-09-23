@@ -43,7 +43,7 @@ lighthouse_validator_container_volumes:
   - "{{ eth_testnet_config_dir }}:/network-config:ro"
 lighthouse_validator_container_command_extra_args:
   - --testnet-dir=/network-config
-  # Takes effect post-Gloas once sigp/lighthouse#9878 is in the unstable image.
+  # Takes effect post-Gloas once the pinned lighthouse image includes sigp/lighthouse#9878.
   - --gas-limit=200000000
   - --graffiti={{ inventory_hostname }}
 lighthouse_validator_datadir: /data/lighthouse-validator

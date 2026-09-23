@@ -76,8 +76,9 @@ ethereum_genesis_generator_config_files:
     # EIP-8141 only: the CL keeps Heze off (HEZE_FORK_EPOCH pinned to max in config.yaml)
     # while the EL activates bogota at HEZE_FORK_EPOCH. Keeps FOCIL (EIP-7805) out.
     export FRAMES_ENABLED=true
-    # Until sigp/lighthouse#9878 lands, lighthouse targets its 60M default post-Gloas
-    # (ignores GAS_LIMIT_SCHEDULE and the VC --gas-limit), so the chain drifts down.
+    # Until sigp/lighthouse#9878 is in the pinned lighthouse image, lighthouse targets its
+    # 60M default post-Gloas (ignores GAS_LIMIT_SCHEDULE and the VC --gas-limit), so the
+    # chain drifts down; bumping the pin past #9878 brings it back to 200M.
     export GENESIS_GASLIMIT=200000000
     export GAS_LIMIT_SCHEDULE='[{"epoch": 0, "gas_limit": 200000000}]'
     export GENESIS_TIMESTAMP={{ ethereum_genesis_timestamp }}

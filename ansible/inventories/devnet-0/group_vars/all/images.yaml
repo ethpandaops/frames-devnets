@@ -1,6 +1,9 @@
 default_ethereum_client_images:
   ### Consensus layer clients
-  lighthouse: ethpandaops/lighthouse:unstable
+  # Pinned to the unstable build tested in kurtosis so watchtower cannot roll a new
+  # unstable onto every CL between genesis and the bogota fork. Bump deliberately
+  # (e.g. once sigp/lighthouse#9878 lands).
+  lighthouse: ethpandaops/lighthouse:unstable-4b1f3c2
   lodestar: chainsafe/lodestar:latest
   nimbus: statusim/nimbus-eth2:multiarch-latest
   prysm: gcr.io/offchainlabs/prysm/beacon-chain:latest
