@@ -21,6 +21,7 @@ slashoor:
       endpoints:
         - https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-bootnode-1.srv.frames-devnet-0.ethpandaops.io
         - https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-ethrex-1.srv.frames-devnet-0.ethpandaops.io
+        - https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-ethrex-2.srv.frames-devnet-0.ethpandaops.io
         - https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-geth-1.srv.frames-devnet-0.ethpandaops.io
         - https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-geth-2.srv.frames-devnet-0.ethpandaops.io
         - https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-nethermind-1.srv.frames-devnet-0.ethpandaops.io

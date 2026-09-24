@@ -56,6 +56,9 @@ checkpointz:
         - name: lighthouse-ethrex-1
           address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-ethrex-1.srv.frames-devnet-0.ethpandaops.io
           dataProvider: true
+        - name: lighthouse-ethrex-2
+          address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-ethrex-2.srv.frames-devnet-0.ethpandaops.io
+          dataProvider: true
         - name: lighthouse-geth-1
           address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-geth-1.srv.frames-devnet-0.ethpandaops.io
           dataProvider: true

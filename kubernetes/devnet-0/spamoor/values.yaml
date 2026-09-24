@@ -39,6 +39,7 @@ spamoor:
   rpcEndpoints:
   - "group(bootnode-1)name(bootnode-1)https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-bootnode-1.srv.frames-devnet-0.ethpandaops.io"
   - "group(lighthouse-ethrex-1)name(lighthouse-ethrex-1)https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-ethrex-1.srv.frames-devnet-0.ethpandaops.io"
+  - "group(lighthouse-ethrex-2)name(lighthouse-ethrex-2)https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-ethrex-2.srv.frames-devnet-0.ethpandaops.io"
   - "group(lighthouse-geth-1)name(lighthouse-geth-1)https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-geth-1.srv.frames-devnet-0.ethpandaops.io"
   - "group(lighthouse-geth-2)name(lighthouse-geth-2)https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-geth-2.srv.frames-devnet-0.ethpandaops.io"
   - "group(lighthouse-nethermind-1)name(lighthouse-nethermind-1)https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-nethermind-1.srv.frames-devnet-0.ethpandaops.io"
