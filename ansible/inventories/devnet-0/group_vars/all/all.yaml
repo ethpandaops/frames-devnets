@@ -210,6 +210,8 @@ gen_kubernetes_config_disabled_services:
   - buildoor
   - faucet-agents
   - xatu-relay-monitor
+  - xatu-cannon # current xatu cannon requires a direct clickhouse output
+  - xatu-cl-mimicry # removed from xatu (replaced by tysm)
 # Dora block-arrival views from the per-devnet xatu databases.
 gen_kubernetes_config_dora_xatu_enabled: true
 
