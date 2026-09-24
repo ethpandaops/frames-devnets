@@ -24,6 +24,8 @@ forkmon:
   endpoints:
   - addr: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-bootnode-1.srv.frames-devnet-0.ethpandaops.io
     name: bootnode-1
+  - addr: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-ethrex-1.srv.frames-devnet-0.ethpandaops.io
+    name: lighthouse-ethrex-1
   - addr: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-geth-1.srv.frames-devnet-0.ethpandaops.io
     name: lighthouse-geth-1
   - addr: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-geth-2.srv.frames-devnet-0.ethpandaops.io

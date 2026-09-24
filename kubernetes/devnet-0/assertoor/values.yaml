@@ -40,6 +40,9 @@ assertoor:
     - name:  bootnode-1
       executionUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-bootnode-1.srv.frames-devnet-0.ethpandaops.io
       consensusUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-bootnode-1.srv.frames-devnet-0.ethpandaops.io
+    - name:  lighthouse-ethrex-1
+      executionUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-ethrex-1.srv.frames-devnet-0.ethpandaops.io
+      consensusUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-ethrex-1.srv.frames-devnet-0.ethpandaops.io
     - name:  lighthouse-geth-1
       executionUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-geth-1.srv.frames-devnet-0.ethpandaops.io
       consensusUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-geth-1.srv.frames-devnet-0.ethpandaops.io
@@ -64,6 +67,7 @@ assertoor:
     walletPrivkey: "<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.assertoor_private_key}>"
     clientPairNames:
       - bootnode-1
+      - lighthouse-ethrex-1
       - lighthouse-geth-1
       - lighthouse-geth-2
       - lighthouse-nethermind-1
@@ -71,6 +75,7 @@ assertoor:
       - lighthouse-reth-1
       - lighthouse-reth-2
     validatorPairNames:
+      - lighthouse-ethrex-1
       - lighthouse-geth-2
       - lighthouse-nethermind-1
       - lighthouse-nethermind-2

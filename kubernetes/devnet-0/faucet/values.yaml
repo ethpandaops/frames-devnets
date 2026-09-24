@@ -50,6 +50,9 @@ powfaucet:
     - url: "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-reth-1.srv.frames-devnet-0.ethpandaops.io"
       name: "lighthouse-reth-1"
       priority: 5
+    - url: "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-ethrex-1.srv.frames-devnet-0.ethpandaops.io"
+      name: "lighthouse-ethrex-1"
+      priority: 5
     - url: "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@rpc-lighthouse-nethermind-2.srv.frames-devnet-0.ethpandaops.io"
       name: "lighthouse-nethermind-2"
       priority: 5

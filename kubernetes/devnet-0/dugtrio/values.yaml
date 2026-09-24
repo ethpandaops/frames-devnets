@@ -36,6 +36,8 @@ dugtrio:
   endpoints:
   - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-bootnode-1.srv.frames-devnet-0.ethpandaops.io
     name: bootnode-1
+  - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-ethrex-1.srv.frames-devnet-0.ethpandaops.io
+    name: lighthouse-ethrex-1
   - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-geth-1.srv.frames-devnet-0.ethpandaops.io
     name: lighthouse-geth-1
   - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.frames-devnets.node_ingress.combined}>@bn-lighthouse-geth-2.srv.frames-devnet-0.ethpandaops.io
