@@ -31,6 +31,7 @@ variable "nodes" {
     { name = "lighthouse-geth", count = 2, cloud = "digitalocean", supernode = true, validator_start = 0, validator_end = 200 },
     { name = "lighthouse-nethermind", count = 2, cloud = "digitalocean", supernode = true, validator_start = 200, validator_end = 400 },
     { name = "lighthouse-reth", count = 2, cloud = "digitalocean", supernode = true, validator_start = 400, validator_end = 600 },
+    { name = "lighthouse-ethrex", count = 1, cloud = "digitalocean", supernode = true },
   ]
 
   validation {
